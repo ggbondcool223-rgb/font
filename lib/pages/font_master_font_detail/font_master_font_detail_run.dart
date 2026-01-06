@@ -22,7 +22,7 @@ class FontMasterFontDetailRun extends GetView<FontMasterComeLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.dacptes.value)),
+              url: WebUri.uri(Uri.parse(controller.glyf.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

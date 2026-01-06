@@ -11,8 +11,8 @@ class FontMasterComeView extends GetView<FontMasterComeLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.jqwoprsc.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.qrolvbkn.value
+              ? const CircularProgressIndicator(color: Colors.purple)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class FontMasterComeView extends GetView<FontMasterComeLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.kmtu();
+              controller.wpsgoje();
             },
             icon: const Icon(
               Icons.restart_alt,

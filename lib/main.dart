@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:font_master/pages/font_master_come/font_master_come_binding.dart';
+import 'package:font_master/pages/font_master_come/font_master_come_view.dart';
+import 'package:font_master/pages/font_master_font_detail/font_master_font_detail_run.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'utils/colors.dart';
@@ -32,6 +35,11 @@ import '../pages/font_master_article_reading/font_master_article_reading_view.da
 import '../pages/font_master_article_reading/font_master_article_reading_binding.dart';
 List<GetPage<dynamic>> Font = [
   GetPage(
+    name: '/',
+    page: () => const FontMasterComeView(),
+    binding: FontMasterComeBinding(),
+  ),
+  GetPage(
     name: '/master_tab',
     page: () => const FontMasterTabView(),
     binding: FontMasterTabBinding(),
@@ -40,6 +48,10 @@ List<GetPage<dynamic>> Font = [
     name: '/master_home',
     page: () => const FontMasterHomeView(),
     binding: FontMasterHomeBinding(),
+  ),
+  GetPage(
+    name: '/font_detail_run',
+    page: () => FontMasterFontDetailRun(),
   ),
   GetPage(
     name: '/font_detail',
@@ -113,7 +125,7 @@ class MyApp extends StatelessWidget {
             () => GetMaterialApp(
               debugShowCheckedModeBanner: false,
               getPages: Font,
-              initialRoute: '/master_tab',
+              initialRoute: '/',
               theme: _buildTheme(themeService.currentFontFamily.value),
             ),
           );
